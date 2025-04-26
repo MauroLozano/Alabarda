@@ -9,10 +9,9 @@ header{
     overflow: hidden;
 }
 .background-image{
-    width: 100%;
+    width: 105%;
     position: absolute;
     z-index: -1;
-    top: -50%;
     filter: brightness(80%);
 }
 .header__content{
