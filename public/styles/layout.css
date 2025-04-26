@@ -1,4 +1,7 @@
 /* HEADER */
+h1{
+    font-size: 8rem;
+}
 header{
     width: 100%;
     height: 100vh;
@@ -9,6 +12,8 @@ header{
     width: 100%;
     position: absolute;
     z-index: -1;
+    top: -50%;
+    filter: brightness(80%);
 }
 .header__content{
     width: 100%;
@@ -17,4 +22,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.header__title{
+    color: #f5debf;
+}
+.header__subtitle{
+    color: #F5CBBF;
+    font-size: 2rem;
 }
