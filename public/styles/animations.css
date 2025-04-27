@@ -1,0 +1,30 @@
+@keyframes slideInLeft {
+    from{
+        opacity: 0%;
+        transform: translateX(-500px);
+    }
+    to{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInUp{
+    from{
+        opacity: 0%;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInDown{
+    from{
+        opacity: 0;
+        transform: translate(-50%, -100px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(-50%, 0);
+    }
+}
