@@ -12,11 +12,9 @@ export default function headerMovement(){
     header.addEventListener('mouseover', ()=>{ //Detects if the mouse is over the header
         
         isMouseOver = true;
-        console.log(isMouseOver);
         header.addEventListener('mousemove', function(event) { //Get the coordinates from the mouse position.
             const mouseX = event.clientX;
             const mouseY = event.clientY;
-            console.log('X: ',mouseX,' Y: ',mouseY);
             mousePosPercentageX = (mouseX*100)/vw;  //Transform the coordinates to percentages.w
             mousePosPercentageY = (mouseY*100)/vh;
             // console.log('X: ',mousePosPercentageX,' Y: ',mousePosPercentageY);
@@ -31,6 +29,5 @@ export default function headerMovement(){
     });
     header.addEventListener('mouseout', ()=>{ //Detects if the mouse is not over the header.
         isMouseOver = false;
-        console.log(isMouseOver)
     });
 };
