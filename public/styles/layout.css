@@ -24,7 +24,6 @@ header::after{
     filter: brightness(80%);
     left: 0;
     top: -50%;
-    
 }
 .header__content{
     width: 100%;
