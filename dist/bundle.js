@@ -55,7 +55,7 @@ function scrollNavigation(){
     document.querySelector('.feat-prod');
     document.querySelector('.partners');
     document.querySelector('.presentation');
-
+    const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
     let wheelDir = null;
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
@@ -72,7 +72,6 @@ function scrollNavigation(){
         wheelDir = event.deltaY;//If wheelDir < 0 it is scrolling up.
 
         let newActive;
-        const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
         let currentActive = document.querySelector('.active');
         currentActive.classList.remove('active');
         if(wheelDir>0){
@@ -86,6 +85,16 @@ function scrollNavigation(){
         }else {
             newActive= currentActive;
         }    }    
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                sections.forEach(s => s.classList.remove('active'));
+                entry.target.classList.add('active');
+                entry.target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    },{threshold:0.5});
+    sections.forEach(section => observer.observe(section));
 }
 
 headerMovement();
