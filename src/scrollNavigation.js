@@ -1,6 +1,10 @@
 import { previousElement, nextElement } from "./utils";
 export default function scrollNavigation(){
-    
+    const header = document.getElementById('header');
+    const feat_prod = document.querySelector('.feat-prod');
+    const partners  = document.querySelector('.partners');
+    const presentation = document.querySelector('.presentation');
+
     let wheelDir = null;
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
@@ -26,9 +30,13 @@ export default function scrollNavigation(){
         }else if( wheelDir<0){
             newActive=previousElement(currentActive, sections); //newActive get the value of the previous element in the Array.
         };
-        const target = newActive || currentActive; //If the active section were at the extremes, newActive would be null, in that case it takes the current value.
-        target.classList.add('active');
-        document.querySelector('.active').scrollIntoView({behavior:'smooth'});
+        if (newActive) {
+            currentActive.classList.remove('active');
+            newActive.classList.add('active');
+            newActive.scrollIntoView({ behavior: 'smooth' });
+        }else{
+            newActive= currentActive;
+        };
     };
     
 };
