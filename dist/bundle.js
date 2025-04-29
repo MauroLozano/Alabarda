@@ -9,7 +9,6 @@ function headerMovement(){
     let isMouseOver=false;
     
     header.addEventListener('mouseover', ()=>{ //Detects if the mouse is over the header
-        console.log('mouse enter');
         isMouseOver = true;
         background_image.style.transition = "top 0.1s ease, left 0.1s ease";
         setTimeout(()=>{
@@ -27,22 +26,32 @@ function headerMovement(){
         currentLeft= -1+ (((mousePosPercentageX-50)/50))*1;
         background_image.style.top=`${currentTop}%`;
         background_image.style.left=`${currentLeft}%`;
-        console.log(currentTop,currentLeft);
     });
     header.addEventListener('mouseout', ()=>{ //Detects if the mouse is not over the header.
-        console.log('mouse out');
         isMouseOver = false;
         background_image.style.transition = 'all 0.1s ease-in';
         background_image.style.top = "-50%";
         background_image.style.left = "-1%";
-        setTimeout(()=>{
-            console.log(background_image.style.top ,background_image.style.left);
-        },300);
         
     });
 }
 
+function nextElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the following element.
+    const currentIndex = Array.from(elementsArray).indexOf(currentElement);
+    if(currentIndex<elementsArray.length-1){
+        return elementsArray[currentIndex+1];
+    }
+    return null;
+}function previousElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the previous element.
+    const currentIndex = Array.from(elementsArray).indexOf(currentElement);
+    if(currentIndex>0){
+        return elementsArray[currentIndex-1]
+    }
+    return null;
+}
+
 function scrollNavigation(){
+    
     let wheelDir = null;
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
@@ -69,20 +78,10 @@ function scrollNavigation(){
         }        const target = newActive || currentActive; //If the active section were at the extremes, newActive would be null, in that case it takes the current value.
         target.classList.add('active');
         document.querySelector('.active').scrollIntoView({behavior:'smooth'});
-    }
-    function nextElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the following element.
-        const currentIndex = Array.from(elementsArray).indexOf(currentElement);
-        if(currentIndex<elementsArray.length-1){
-            return elementsArray[currentIndex+1];
-        }
-        return null;
-    }    function previousElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the previous element.
-        const currentIndex = Array.from(elementsArray).indexOf(currentElement);
-        if(currentIndex>0){
-            return elementsArray[currentIndex-1]
-        }
-        return null;
-    }}
+    }    
+}
 
 headerMovement();
 scrollNavigation();
+previousElement();
+nextElement();

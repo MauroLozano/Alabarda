@@ -1,4 +1,6 @@
+import { previousElement, nextElement } from "./utils";
 export default function scrollNavigation(){
+    
     let wheelDir = null;
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
@@ -28,19 +30,5 @@ export default function scrollNavigation(){
         target.classList.add('active');
         document.querySelector('.active').scrollIntoView({behavior:'smooth'});
     };
-
-    function nextElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the following element.
-        const currentIndex = Array.from(elementsArray).indexOf(currentElement);
-        if(currentIndex<elementsArray.length-1){
-            return elementsArray[currentIndex+1];
-        }
-        return null;
-    };
-    function previousElement(currentElement,elementsArray){ //It takes an array and the element of the array and returns the previous element.
-        const currentIndex = Array.from(elementsArray).indexOf(currentElement);
-        if(currentIndex>0){
-            return elementsArray[currentIndex-1]
-        }
-        return null;
-    };
+    
 };

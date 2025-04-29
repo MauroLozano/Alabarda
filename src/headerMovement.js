@@ -10,7 +10,6 @@ export default function headerMovement(){
     let isMouseOver=false;
     
     header.addEventListener('mouseover', ()=>{ //Detects if the mouse is over the header
-        console.log('mouse enter')
         isMouseOver = true;
         background_image.style.transition = "top 0.1s ease, left 0.1s ease";
         setTimeout(()=>{
@@ -28,17 +27,12 @@ export default function headerMovement(){
         currentLeft= -1+ (((mousePosPercentageX-50)/50))*1;
         background_image.style.top=`${currentTop}%`;
         background_image.style.left=`${currentLeft}%`;
-        console.log(currentTop,currentLeft)
     });
     header.addEventListener('mouseout', ()=>{ //Detects if the mouse is not over the header.
-        console.log('mouse out');
         isMouseOver = false;
         background_image.style.transition = 'all 0.1s ease-in';
         background_image.style.top = "-50%";
         background_image.style.left = "-1%";
-        setTimeout(()=>{
-            console.log(background_image.style.top ,background_image.style.left);
-        },300);
         
     });
 };
