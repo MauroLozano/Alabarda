@@ -1,15 +1,10 @@
 import { previousElement, nextElement } from "./utils";
 export default function scrollNavigation(){
-    const header = document.getElementById('header');
-    const feat_prod = document.querySelector('.feat-prod');
-    const partners  = document.querySelector('.partners');
-    const presentation = document.querySelector('.presentation');
     const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
     let wheelDir = null;
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
     let last_execution = 0;
-
     document.addEventListener('wheel',handleWheel,{passive:false});
     //Scrolling is a passive event by default in the browser, it's necessary to change it to false to use preventDefault().
     function handleWheel(event){
@@ -47,5 +42,5 @@ export default function scrollNavigation(){
             }
         })
     },{threshold:0.5})
-    sections.forEach(section => observer.observe(section))
+    sections.forEach(section => observer.observe(section));
 };

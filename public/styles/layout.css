@@ -50,7 +50,6 @@ header::after{
     overflow: hidden;
 }
 .feat-prod__title{
-    animation: slideInLeft 1s ease-in-out 200ms 1 normal forwards;
     transform: translateX(-500px);
     position: absolute;
     top: 20px;
@@ -64,7 +63,6 @@ header::after{
     overflow: hidden;
 }
 .partners__title{
-    animation: slideInUp 1s ease-in-out 200ms 1 normal forwards;
     position: absolute;
     transform: translateY(100px);
     bottom: 20px;
@@ -78,7 +76,6 @@ header::after{
     overflow: hidden;
 }
 .presentation__title{
-    animation: slideInDown 1s ease-in-out 200ms 1 normal forwards;
     position: absolute;
     transform: translate(-50%,-100px);
     top: 20px;
