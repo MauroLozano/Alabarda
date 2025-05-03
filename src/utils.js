@@ -12,3 +12,6 @@ export function previousElement(currentElement,elementsArray){ //It takes an arr
     }
     return currentElement;
 };
+export function isMobile(){
+    return /Android|iPhone/i.test(navigator.userAgent); //Looks in the userAgent for the words Android and iPhone.
+}

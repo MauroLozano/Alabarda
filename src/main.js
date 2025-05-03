@@ -4,4 +4,3 @@ import animations from "./animations.js";
 headerMovement();
 scrollNavigation();
 animations();
-
