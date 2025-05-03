@@ -14,7 +14,6 @@ function nextElement(currentElement,elementsArray){ //It takes an array and the 
     return /Android|iPhone/i.test(navigator.userAgent); //Looks in the userAgent for the words Android and iPhone.
 }
 
-console.log(isMobile());
 function headerMovement(){
     const header = document.getElementById('header');
     const background_image = document.getElementById('background-image');
@@ -32,7 +31,7 @@ function headerMovement(){
             },100);
         });
         header.addEventListener('mousemove', function(event) { //Get the coordinates from the mouse position.
-            if(!isMouseOver) return;
+            if(!isMouseOver && !header.classList.contains('active')) return;
             const mouseX = event.clientX;
             const mouseY = event.clientY;
             mousePosPercentageX = (mouseX*100)/vw;  //Transform the coordinates to percentages.w
