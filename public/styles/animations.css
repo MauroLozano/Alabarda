@@ -37,3 +37,14 @@
 .slideInDown{
     animation: slideInDown 1s ease-in-out 200ms 1 normal forwards;
 }
+@keyframes sliderMovement {
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.sliderMovement{
+    animation: sliderMovement 40s linear infinite;
+}

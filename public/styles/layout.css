@@ -46,20 +46,88 @@ header::after{
     height: 100vh;
     width: 100%;
     position: relative;
-    border: 1px solid #000;
     overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
 }
 .feat-prod__title{
     transform: translateX(-500px);
     position: absolute;
     top: 20px;
     left: 20px;
+    font-size: 6rem;
+}
+.feat-prod__link{
+    font-size: 3rem;
+    position: absolute;
+    left: 28px;
+    top: 300px;
+    background-color: #EAD196;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: #202A41;
+}
+.feat-prod__slider{
+    position: relative;
+    bottom: 100px;
+    height: 10em;
+    width: 100%;
+    display : flex;
+    align-items: center;
+}
+.feat-prod__slider::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 10em;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to right, #393E46, transparent);
+}
+.feat-prod__slider::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 10em;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to left, #393E46, transparent);
+}
+.slider__track{
+    position: relative;
+    will-change: transform;
+    width: fit-content;
+    height: inherit;
+    display: flex;
+}
+.slide{
+    height: 100%;
+    width: 200px;
+    background-color: #EAD196;
+    border: 1px solid black;
+    flex-shrink: 0;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 
+    0 -5px 10px -2px rgba(0, 0, 0, 0.5),
+    0 5px 10px -2px rgba(0, 0, 0, 0.5);
+}
+.slider_active{
+    transform: scale(0.98);
+}
+.slide:hover{
+    transform: scale(1.001);
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
 }
 .partners{
     height: 100vh;
     width: 100%;
     position: relative;
-    border: 1px solid #000;
     overflow: hidden;
 }
 .partners__title{
@@ -72,7 +140,6 @@ header::after{
     height: 100vh;
     width: 100%;
     position: relative;
-    border: 1px solid #000;
     overflow: hidden;
 }
 .presentation__title{

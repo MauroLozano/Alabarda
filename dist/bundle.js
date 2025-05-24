@@ -101,7 +101,7 @@ function animations(){
     const partners__title = document.querySelector('.partners__title');
     const presentation = document.querySelector('.presentation');
     const presentation_title = document.querySelector('.presentation__title');
-    const observer = new MutationObserver(function(mutations) { //It waits for the changes for the DOM to be made before running the code.
+    const mutations_observer = new MutationObserver(function(mutations) { //It waits for the changes for the DOM to be made before running the code.
         if(feat_prod.classList.contains('active')){             //Otherwise the if won't find the class active.
             feat_prod_title.classList.add('slideInLeft');
         }
@@ -112,9 +112,31 @@ function animations(){
             presentation_title.classList.add('slideInDown');
         }
     });
-    observer.observe(feat_prod,partners,presentation, { attributes: true, attributeFilter: ['class'] });
+    mutations_observer.observe(feat_prod,partners,presentation, { attributes: true, attributeFilter: ['class'] });
 }
 
+function slider(){
+    const sliders = document.querySelectorAll('.slide');
+    const slider_container = document.querySelector('.feat-prod__slider');
+    const slider_track = document.querySelector('.slider__track');
+
+    slider_container.addEventListener('mouseenter',()=>{
+        sliders.forEach(slider => {
+            slider.classList.add('slider_active');
+        });
+        slider_track.style.animationPlayState = "paused";
+    });
+    slider_container.addEventListener('mouseleave',()=>{
+        setTimeout(() => {
+            slider_track.style.animationPlayState = "running";
+        }, 100);
+        sliders.forEach(slider => {
+            slider.classList.remove('slider_active');
+        });
+    });
+}
+
+slider();
 headerMovement();
 scrollNavigation();
 animations();
