@@ -103,12 +103,10 @@ function scrollNavigation(){
                         window.getComputedStyle(target).overflowY === 'scroll';
         if (isScrollbar) {
             isScrollbarPressed = true;
-            console.log('Scrollbar pressed');
         }    });
     document.addEventListener('mouseup', function(){
         if(isScrollbarPressed){
             isScrollBarPressed = false;
-            console.log('Scrollbar released');
         }
     });
     document.addEventListener('mouseleave', function(){
