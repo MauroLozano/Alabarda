@@ -55,18 +55,35 @@ header::after{
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 6rem;
 }
 .feat-prod__link{
     font-size: 3rem;
     position: absolute;
     left: 28px;
     top: 300px;
-    background-color: #EAD196;
+    background-color: #d5c3a7;
     padding: 10px 20px;
     border-radius: 10px;
     font-family: Montserrat;
     color: #202A41;
+    transition: all 0.3s ease-in-out;
+}
+.feat-prod__link{
+    font-size: 3rem;
+    position: absolute;
+    left: 28px;
+    top: 300px;
+    background-color: #d5c3a7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: tra;
+    transition: all 0.3s ease-in-out;
+}
+.feat-prod__link:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: #EAD196;
+    transform: scale(1.02);
 }
 .feat-prod__slider{
     position: relative;
@@ -108,7 +125,7 @@ header::after{
 .slide{
     height: 100%;
     width: 200px;
-    background-color: #EAD196;
+    background-color: #d5c3a7;
     border: 1px solid black;
     flex-shrink: 0;
     transition: all 0.2s ease-in-out;
@@ -134,18 +151,62 @@ header::after{
     position: absolute;
     bottom: -100px;
     right: 20px;
-    font-size: 6rem;
 }
 .presentation{
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .presentation__title{
     position: absolute;
     top: -100px;
-    left: 50%;
-    width: 900px;
-    font-size: 6rem;
+    left: 50%;  
+    width: 100%;
+    text-align: center;
+}
+.presentation__content{
+    position: absolute;
+    top: 120px;
+    width: 60vw;
+    height: fit-content;
+}
+.presentation__content h3{
+    font-size: 1.8rem;  
+    color: #EAD196;
+    font-family: Montserrat;
+    text-align: center;
+    margin: 10px;
+}
+.presentation__content p{
+    font-size: 1.3rem;
+    color: #d5c3a7;
+    font-family: Montserrat;
+    text-align: center;
+    margin: 10px;
+}
+.services{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100px;
+}
+.services p{
+    font-size: 0.8rem;
+    color: #d5c3a7;
+    font-family: Montserrat;
+    text-align: center;
+}
+.service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 100%;
+}
+.service__img{
+    max-width: 50px;
 }
