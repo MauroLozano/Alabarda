@@ -14,11 +14,11 @@
 @keyframes slideInUp{
     from{
         opacity: 0%;
-        transform: translateY(100px);
+        transform: translateY(0);
     }
     to{
         opacity: 100%;
-        transform: translateY(0);
+        transform: translateY(-100px);
     }
 }
 .slideInUp{
@@ -27,11 +27,11 @@
 @keyframes slideInDown{
     from{
         opacity: 0;
-        transform: translate(-50%, -100px);
+        transform: translate(-50%, 0);
     }
     to{
         opacity: 100%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 100px);
     }
 }
 .slideInDown{

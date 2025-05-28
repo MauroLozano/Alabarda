@@ -51,7 +51,7 @@ header::after{
     flex-direction: column-reverse;
 }
 .feat-prod__title{
-    transform: translateX(-500px);
+    transform: translateX(-610px);
     position: absolute;
     top: 20px;
     left: 20px;
@@ -132,9 +132,9 @@ header::after{
 }
 .partners__title{
     position: absolute;
-    transform: translateY(100px);
-    bottom: 20px;
+    bottom: -100px;
     right: 20px;
+    font-size: 6rem;
 }
 .presentation{
     height: 100vh;
@@ -144,7 +144,8 @@ header::after{
 }
 .presentation__title{
     position: absolute;
-    transform: translate(-50%,-100px);
-    top: 20px;
+    top: -100px;
     left: 50%;
+    width: 900px;
+    font-size: 6rem;
 }
