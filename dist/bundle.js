@@ -58,6 +58,7 @@ function scrollNavigation(){
     document.getElementById('header').classList.add('active');
     const scroll_delay = 500;
     let last_execution = 0;
+    let isScrollbarPressed = false;
     document.addEventListener('wheel',handleWheel,{passive:false});
     //Scrolling is a passive event by default in the browser, it's necessary to change it to false to use preventDefault().
     function handleWheel(event){
@@ -81,17 +82,40 @@ function scrollNavigation(){
             newActive.scrollIntoView({ behavior: 'smooth' });
         }else {
             newActive= currentActive;
-        }    }    
-    const observer = new IntersectionObserver((entries)=>{
+        }    }    const observer = new IntersectionObserver((entries)=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
                 sections.forEach(s => s.classList.remove('active'));
                 entry.target.classList.add('active');
-                entry.target.scrollIntoView({ behavior: 'smooth' });
+                if(!isScrollbarPressed){
+                    entry.target.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     },{threshold:0.5});
     sections.forEach(section => observer.observe(section));
+
+    document.addEventListener('mousedown', function(e) {
+        const target = e.target;
+        
+        const isScrollbar = target === document.documentElement ||  //Is the document root element. The scrollbar is always present.
+                        window.getComputedStyle(target).overflow === 'scroll' || //Obtains the styles of the element and checks if the overflow is set to scroll.
+                        window.getComputedStyle(target).overflowY === 'scroll';
+        if (isScrollbar) {
+            isScrollbarPressed = true;
+            console.log('Scrollbar pressed');
+        }    });
+    document.addEventListener('mouseup', function(){
+        if(isScrollbarPressed){
+            isScrollBarPressed = false;
+            console.log('Scrollbar released');
+        }
+    });
+    document.addEventListener('mouseleave', function(){
+        if(isScrollbarPressed){
+            isScrollbarPressed = false;
+        }
+    });
 }
 
 function animations(){
