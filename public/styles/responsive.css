@@ -1,4 +1,7 @@
 @media (orientation: portrait) {
+    .logo__link{
+        top: 50px;
+    }
     .feat-prod{
         display: grid;
         grid-template-columns: 1fr;
@@ -136,6 +139,14 @@
 }
 
 @media (max-width: 680px) {
+    .logo__link{
+        transform: scale(0.6);
+        top: 20px;
+        left: 20px;
+    }
+    .logo__link:hover{
+        transform: scale(0.65);
+    }
     .feat-prod__title{
         font-size: 5rem;
     }

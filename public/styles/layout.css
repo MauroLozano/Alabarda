@@ -20,6 +20,7 @@ header::after{
 .background-image{
     height: 100%;
     width: 100%;
+    transform: scale(1.05);
     position: absolute;
     z-index: -1;
     filter: brightness(80%);
@@ -40,6 +41,27 @@ header::after{
     color: #EAD196;
     font-size: 2rem;
     font-family: Montserrat;
+}
+.header__logo{
+    filter: drop-shadow(0 0 5px #050505);
+    transition: filter 0.2s ease-in-out ;
+}
+.header__logo:hover{
+    filter: drop-shadow(5px 5px 20px #050505);
+    transition: filter 0.2s ease-in-out ;
+}
+.logo__link{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    transition: transform 0.2s ease-in-out ;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+}
+.logo__link:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out ;
 }
 /* MAIN */
 .feat-prod{
