@@ -23,10 +23,19 @@
     font-style: normal;
   }
 body{
+    background-image: url('../assets/images/black-linen.png');
     background-color: #393E46;
 }
 h2{
     font-family: Montserrat;
     font-size: 6rem;
     color: #EAD196;
+}
+.section{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.active{
+    opacity: 100%;
+    transition: opacity 0.9s ease-in-out;
 }

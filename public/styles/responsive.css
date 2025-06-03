@@ -1,4 +1,78 @@
+@media (orientation: portrait) {
+    .feat-prod{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .feat-prod__title{
+        grid-row: 1;
+        text-align: center;
+        margin: 0;
+    }
+    .feat-prod__categories{
+        width: 80%;
+        height: 100%;
+    }
+    .feat-prod__link{
+        font-size: 1.5rem;
+        margin: 0;
+        grid-row: 2;
+        padding: 0.5rem;
+    }
+    .feat-prod__categories{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .feat-prod__slider{
+        overflow: hidden;
+        position: relative;
+        bottom: unset;
+        grid-row: 4;
+    }
+}
+@media (orientation: landscape) {
+    .feat-prod{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
 
+@media (max-width: 1580px) {
+    .header__subtitle{
+        font-size: 2rem;
+    }
+    .feat-prod__title{
+        font-size: 6rem;
+    }
+    .presentation__title{
+        font-size: 6rem ;
+    }
+    .feat-prod__link{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 1200px) {
+    .header__subtitle{
+        font-size: 2rem;
+    }
+    .feat-prod__title{
+        font-size: 5em;
+    }
+    .presentation__title{
+        font-size: 6rem ;
+    }
+    .feat-prod__link{
+        font-size: 2.7rem;
+    }
+    .presentation > div{
+        width: 80%;
+    }
+}
 @media (max-width: 1024px) {
     h1{
         font-size: 6rem;
@@ -12,8 +86,24 @@
     .header__subtitle{
         font-size: 2rem;
     }
-    h2{
-        font-size: 5rem;
+    .feat-prod__title{
+        font-size: 6rem;
+    }
+    .presentation__title{
+        font-size: 5rem ;
+    }
+    .services p{
+        font-size: 0.7rem;
+        margin: 0.5rem;
+    }
+}
+@media (max-width: 840px) {
+    .presentation__title{
+        font-size: 4.5rem;
+    }
+    .presentation__content{
+        top: 6rem;
+        width: 80vw;
     }
 }
 @media (max-width: 760px) {
@@ -30,12 +120,75 @@
     .header__subtitle{
         font-size: 1.4rem;
     }
-    h2{
+    .feat-prod__title{
+        font-size: 6rem;
+    }
+    .presentation p{
+        font-size: 1.1rem;
+    }
+    .presentation__title{
         font-size: 4rem;
     }
-}@media (max-width: 680px) {
-    h2{
-        font-size: 3.2rem;
+    .services p{
+        font-size: 0.7rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .feat-prod__title{
+        font-size: 5rem;
+    }
+    .feat-prod__link{
+        font-size: 3rem;
+    }
+    .presentation > div{
+        width: 100%;
+    }
+    .presentation{
+        width: 100%;
+        
+    }
+    .presentation__title{
+        font-size: 4rem;
+    }
+    .presentation p{
+        font-size: 1.1rem;
+    }
+    .services p{
+        font-size: 0.6rem;
+    }
+    .presentation__content4{
+        width: 100vw;
+    }
+}
+@media (max-width: 570px) {
+    .feat-prod__link{
+        font-size: 2.5rem;
+    }
+    .presentation p{
+        font-size: 0.9rem;
+    }
+    .services p{
+        font-size: 0.7rem;
+    }
+    .presentation h3{
+        font-size: 1.2rem;  
+
+    }
+}
+@media (max-width: 540px) {
+    .feat-prod__title{
+        font-size: 4rem;
+    }
+    .partners__title{
+        font-size: 4rem;
+    }
+    .presentation__title{
+        font-size: 4.5rem;
+    }
+    .feat-prod__link{
+        font-size: 2.5rem;
     }
 }
 @media (max-width: 480px) {
@@ -52,8 +205,31 @@
     .header__subtitle{
         font-size: 1.2rem;
     }
-    h2{
-        font-size: 2.5rem;
+    .feat-prod__title{
+        font-size: 3.6rem;
+    }
+    .presentation__title{
+        font-size: 3.8rem;
+    }
+    .feat-prod__link{
+        font-size: 2rem;
+    }
+    .service__img{
+        max-width: 40px;    
+    }
+    .services p{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 410px) {
+    .partners__title{
+        font-size: 3.2rem;
+    }
+    .presentation__title{
+        font-size: 2rem;
+    }
+    .service__img{
+        max-width: 30px;    
     }
 }
 @media (max-width: 375px) {
@@ -70,7 +246,15 @@
     .header__subtitle{
         font-size: 1rem;
     }
-    h2{
-        font-size: 2rem;
+    .feat-prod__title{
+        font-size: 3rem;
+    }
+    .feat-prod__link{
+        font-size: 1.8rem;
+    }
+}
+@media (max-height: 700px){
+    .feat-prod__slider{
+        height: 10rem;
     }
 }
