@@ -215,7 +215,7 @@
         font-size: 2rem;
     }
     .service__img{
-        max-width: 40px;    
+        width: 40px;    
     }
     .services p{
         font-size: 0.6rem;
@@ -229,7 +229,7 @@
         font-size: 2rem;
     }
     .service__img{
-        max-width: 30px;    
+        width: 30px;    
     }
 }
 @media (max-width: 375px) {

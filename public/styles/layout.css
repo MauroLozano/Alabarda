@@ -254,5 +254,5 @@ header::after{
     height: 100%;
 }
 .service__img{
-    max-width: 50px;    
+    width: 50px;    
 }
