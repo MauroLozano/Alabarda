@@ -1,12 +1,15 @@
 {
   "type": "module",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack ",
+    "watch": "webpack --watch"
   },
   "name": "alabarda",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
   },

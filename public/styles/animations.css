@@ -45,6 +45,6 @@
         transform: translateX(0%);
     }
 }
-.sliderMovement{
+.slider__movement{
     animation: sliderMovement 40s linear infinite;
 }

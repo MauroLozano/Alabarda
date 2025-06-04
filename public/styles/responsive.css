@@ -90,7 +90,7 @@
         width: 80%;
     }
     footer img{
-        width: 70px;
+        width: 100%;
     }
 }
 @media (max-width: 1024px) {
