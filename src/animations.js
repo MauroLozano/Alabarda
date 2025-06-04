@@ -16,9 +16,6 @@ export default function animations(){
         if(presentation.classList.contains('active')){
             presentation_title.classList.add('slideInDown');
         }
-        if(footer.classList.contains('active')){
-            presentation.classList.add
-        }
     });
     mutations_observer.observe(feat_prod,partners,presentation, { attributes: true, attributeFilter: ['class'] });
 }

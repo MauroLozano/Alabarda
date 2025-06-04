@@ -1,9 +1,24 @@
 {
   "type": "module",
-  "devDependencies": {
-    "rollup": "^4.40.1"
-  },
   "scripts": {
-    "build": "rollup --config --watch"
-  }
+    "build": "webpack"
+  },
+  "name": "alabarda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauroLozano/Alabarda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauroLozano/Alabarda/issues"
+  },
+  "homepage": "https://github.com/MauroLozano/Alabarda#readme",
+  "description": ""
 }

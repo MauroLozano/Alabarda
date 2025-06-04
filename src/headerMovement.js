@@ -1,9 +1,11 @@
-import { isMobile } from "./utils";
+import { isMobile } from "./utils.js";
 export default function headerMovement(){
     const header = document.getElementById('header');
     const background_image = document.getElementById('background-image');
     const vw = document.documentElement.clientWidth;
     const vh = document.documentElement.clientHeight;
+    var currentTop;
+    var currentLeft
     let mousePosPercentageX = null;
     let mousePosPercentageY = null;
     let isMouseOver=false;

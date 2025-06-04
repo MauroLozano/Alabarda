@@ -1,4 +1,4 @@
-import { previousElement, nextElement } from "./utils";
+import { previousElement, nextElement } from "./utils.js";
 export default function scrollNavigation(){
     const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
     let wheelDir = null;
