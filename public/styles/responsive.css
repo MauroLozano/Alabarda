@@ -59,7 +59,6 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
-
 @media (max-width: 1580px) {
     .header__subtitle{
         font-size: 2rem;
@@ -144,6 +143,9 @@
     .feat-prod__title{
         font-size: 6rem;
     }
+    .feat-prod__slider{
+        height: 10rem;
+    }
     .presentation p{
         font-size: 1.1rem;
     }
@@ -155,7 +157,6 @@
         margin: 0.5rem;
     }
 }
-
 @media (max-width: 680px) {
     .logo__link{
         transform: scale(0.6);
@@ -303,10 +304,5 @@
     }
     .feat-prod__link{
         font-size: 1.8rem;
-    }
-}
-@media (max-height: 700px){
-    .feat-prod__slider{
-        height: 10rem;
     }
 }

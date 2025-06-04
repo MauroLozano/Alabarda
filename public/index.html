@@ -18,12 +18,15 @@
 </head>
 <body>
     <header id="header" class="section">
-        <img src="assets/images/alabarda-background-bulrred.webp" rel="preload" as="image" alt="" class="background-image background-image-position" id="background-image">
+        <picture>
+            <source srcset="assets/images/alabarda-background-bulrred-833x833.webp" media="(orientation: portrait)" >
+            <img src="assets/images/alabarda-background-bulrred-1024x1024.webp" rel="preload" as="image" alt="" class="background-image background-image-position desktop-image" id="background-image" fetchpriority=high>
+        </picture>
         <div class="header__content">
             <h1 class="header__title vast-shadow-regular">Alabarda</h1>
             <h2 class="header__subtitle">Indumentaria Formal</h2>
         </div>
-        <a href="https://alabarda.netlify.app/" target="_blank" class="logo__link"><img src="./assets/images/alabarda-logo100x100.webp" alt="" class="header__logo"></a>
+        <a href="https://alabarda.netlify.app/" target="_blank" class="logo__link"><img src="./assets/images/alabarda-logo150x150.webp" alt="" class="header__logo"></a>
     </header>
     <main>
         <section class="feat-prod section">
