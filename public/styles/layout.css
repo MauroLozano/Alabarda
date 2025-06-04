@@ -278,3 +278,122 @@ header::after{
 .service__img{
     width: 50px;    
 }
+/* FOOTER */
+footer{
+    height: 100vh;
+    background: linear-gradient(transparent, rgb(20, 20, 20));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h4{
+    font-size: 2rem;
+    font-family: Montserrat;
+    color:#dadada; ;
+}
+footer p{
+    font-size: 1.5rem;
+    font-family: Montserrat;
+    color:#dadada; ;
+}
+.footer__heading{
+    font-size: 4rem;
+    grid-column: 1 / 3;
+}
+.footer__contact{
+    height: 50vh;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    place-items: center;
+}
+.footer__separator{
+    background-color: #dadada;
+    height: 60vh;
+    width: 5px;
+    border-radius: 5px;
+}
+.footer__share{
+    height: 50vh;
+    width: 40%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+.social__container{
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.share__media{
+    transform: scale(0.9);
+    transition: transform 0.2s ease-in-out;
+}
+.share__media:hover{
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+.copy__link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.98);
+    transition: transform 0.2s ease-in-out;
+    grid-column: 1 / 3;
+}
+.copy__link:hover{
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+.copy__img{
+    width: 50px;
+    margin: 0 20px;
+}
+.contact__phone{
+    grid-row: 2 / 4;
+    grid-column: 2 / 2;
+}
+.contact__whatsapp{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact__phone{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.phone__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact__location{
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.location__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.location__img{
+    width: 50px;
+    margin: 0 20px;
+}
