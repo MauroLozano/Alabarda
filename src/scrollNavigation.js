@@ -1,4 +1,4 @@
-import { previousElement, nextElement } from "./utils.js";
+import { previousElement, nextElement, isMobile } from "./utils.js";
 export default function scrollNavigation(){
     const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
     let wheelDir = null;
@@ -12,7 +12,7 @@ export default function scrollNavigation(){
     let sliderPagesIndex = 0;
     let lastSliderScroll = 0;
     const sliderCooldown = 400;
-    if(partnersSlider){
+    if(partnersSlider && !isMobile()){
         partnersSlider.addEventListener('wheel', (event)=>{
             event.preventDefault(); 
             const now = Date.now();
@@ -40,7 +40,7 @@ export default function scrollNavigation(){
         })
     }
     function handleWheel(event){ //Function to control the vertical scrolling of the page and giving the active class.
-        if (event.target.closest('.partners__slider')) return; //if the event happens while being on the partners slider, return.
+        if (event.target.closest('.partners__slider') || isMobile()) return; //if the event happens while being on the partners slider, return.
         event.preventDefault(); //Prevents default behaviour of the scrollbar.
         const now = Date.now(); //Delay function so the wheel triggers every 500ms.
         if(now - last_execution < scroll_delay){    //Cooldown for scrolling.
