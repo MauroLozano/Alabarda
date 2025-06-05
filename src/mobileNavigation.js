@@ -42,6 +42,10 @@ export default function mobileNavigation(){
         touchStartY = event.changedTouches[0].screenY; //Gets the Y position when touching.
     }, { passive: true });
     document.addEventListener('touchmove', function(event) { //Prevents the scrolling while moving.
+        let currentActive = document.querySelector('.active');
+        if(currentActive.id === "header" && event.touches[0].clientY-touchStartY > 0) { //If the active section is the header and the scroll is upwards, return so the user can refresh the page.
+            return;
+        }
         event.preventDefault();
     }, { passive: false });
     document.addEventListener('touchend',(event)=>{

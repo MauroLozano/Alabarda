@@ -217,7 +217,7 @@ header::after{
 }
 .partners__slider{
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     width: 90vw;
     height: 70vh;
     background-color: white;
@@ -517,7 +517,7 @@ h2{
     }
     to{
         opacity: 100%;
-        transform: translate(-50%,-100px);
+        transform: translate(-50%, -120px);
     }
 }
 .slideInUp{
