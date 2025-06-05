@@ -215,10 +215,13 @@
         font-size: 4rem;
     }
     .presentation__title{
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .feat-prod__link{
         font-size: 2.5rem;
+    }
+    .service{
+        flex-direction: column;
     }
 }
 @media (max-width: 480px) {
@@ -239,7 +242,7 @@
         font-size: 3.6rem;
     }
     .presentation__title{
-        font-size: 3.8rem;
+        font-size: 3rem;
     }
     .feat-prod__link{
         font-size: 2rem;
@@ -265,7 +268,7 @@
         font-size: 3.2rem;
     }
     .presentation__title{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .service__img{
         width: 30px;    
@@ -284,7 +287,7 @@
 }
 @media (max-width: 375px) {
     h1{
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     .background-image{
         width: auto;
@@ -301,5 +304,8 @@
     }
     .feat-prod__link{
         font-size: 1.8rem;
+    }
+    .presentation__title{
+        font-size: 2.2rem;
     }
 }
