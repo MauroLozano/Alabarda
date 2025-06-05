@@ -64,6 +64,7 @@ header::after{
     transition: transform 0.2s ease-in-out ;
 }
 /* MAIN */
+/* FEATURED PRODUCTS */
 .feat-prod{
     position: relative;
     overflow: hidden;
@@ -198,11 +199,14 @@ header::after{
     transition: transform 0.3s ease-in-out;
     z-index: 5;
 }
+/* PARTNERS */
 .partners{
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .partners__title{
     position: absolute;
@@ -211,6 +215,46 @@ header::after{
     text-align: center;
     left: 50%;
 }
+.partners__slider{
+    margin: auto;
+    margin-bottom: 200px;
+    width: 90vw;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    overflow: scroll;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+}
+.slider__page{
+    display: flex;
+    width: 100%;
+    scroll-snap-align: start;
+}
+.partners__slide{
+    width: 30vw;
+    height: 100%;
+    background-color: #d5c3a7;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.partner__img{
+    aspect-ratio: 3 / 4 ;
+}
+.partner__info{
+    margin-top: auto;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(transparent, rgb(20, 20, 20) );
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* PRESENTATION */
 .presentation{
     height: 100vh;
     width: 100%;

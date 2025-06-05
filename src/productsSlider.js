@@ -1,4 +1,4 @@
-export default function slider(){
+export default function productsSlider(){
     const sliders = document.querySelectorAll('.slide');
     const slider_container = document.querySelector('.feat-prod__slider');
     const slider_track = document.querySelector('.slider__track');

@@ -33,7 +33,7 @@ h2{
     text-align: center;
 }
 .section{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.2s ease-in-out;
 }
 .active{
