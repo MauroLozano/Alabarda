@@ -51,9 +51,10 @@ header::after{
     transition: filter 0.2s ease-in-out ;
 }
 .logo__link{
+    width: 30px;
     position: absolute;
     left: 50px;
-    bottom: 50px;
+    top: 50px;
     transition: transform 0.2s ease-in-out ;
     width: fit-content;
     height: fit-content;
@@ -95,6 +96,7 @@ header::after{
     border: solid 1px black;
     grid-row: span 2;
     grid-column: span 3;
+    overflow: hidden;
 }
 .category2{
     width: 100%;
@@ -103,6 +105,7 @@ header::after{
     border: solid 1px black;
     grid-row: span 3;
     grid-column: span 2;
+    overflow: hidden;
 }
 .category3{
     width: 100%;
@@ -111,6 +114,7 @@ header::after{
     border: solid 1px black;
     grid-row: span 3;
     grid-column: span 3;
+    overflow: hidden;
 }
 .category4{
     width: 100%;
@@ -119,6 +123,11 @@ header::after{
     border: solid 1px black;
     grid-row: span 2;
     grid-column: span 2;
+    overflow: hidden;
+}
+.category__img{
+    object-fit: cover;
+    height: inherit;
 }
 .feat-prod__link{
     font-size:  4rem;
@@ -228,25 +237,29 @@ header::after{
     border-radius: 10px;
 }
 .partners__slide{
+    position: relative;
     width: 30vw;
     height: 100%;
-    background-color: #d5c3a7;
+    background-color: transparent;
     border: solid 1px black;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
 }
 .partner__img{
-    aspect-ratio: 3 / 4 ;
+    object-fit: cover;
+    height: inherit;
 }
 .partner__info{
-    margin-top: auto;
-    height: 300px;
-    width: 100%;
-    background: linear-gradient(transparent, rgb(20, 20, 20) );
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    background: linear-gradient(transparent, rgb(20, 20, 20));
     display: flex;
     align-items: center;
     padding: 20px;
+    font-size: 1.5rem;
+    color: #dadada;
 }
 /* PRESENTATION */
 .presentation{
@@ -565,7 +578,7 @@ h2{
         margin: 0;
     }
     .feat-prod__categories{
-        width: 80%;
+        width: 60%;
         height: 100%;
     }
     .feat-prod__link{
@@ -762,6 +775,9 @@ h2{
     }
     footer p{
         font-size: 1.1rem;
+    }
+    .feat-prod__categories{
+        width: 80%;
     }
 }
 @media (max-width: 570px) {

@@ -16,7 +16,7 @@
         margin: 0;
     }
     .feat-prod__categories{
-        width: 80%;
+        width: 60%;
         height: 100%;
     }
     .feat-prod__link{
@@ -213,6 +213,9 @@
     }
     footer p{
         font-size: 1.1rem;
+    }
+    .feat-prod__categories{
+        width: 80%;
     }
 }
 @media (max-width: 570px) {
