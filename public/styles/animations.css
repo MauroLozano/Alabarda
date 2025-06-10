@@ -14,11 +14,11 @@
 @keyframes slideInUp{
     from{
         opacity: 0%;
-        transform: translate(-50%,0);
+        transform: translate(0,100px);
     }
     to{
         opacity: 100%;
-        transform: translate(-50%, -140px);
+        transform: translate(0,0);
     }
 }
 .slideInUp{
