@@ -38,6 +38,7 @@
     /* FOOTER */
     footer{
         flex-direction: column;
+        padding: 0 10px;
     }
     .footer__share{
         width: 100%;
@@ -46,6 +47,7 @@
     .footer__contact{
         width: 100%;
         height: 40vh;
+        grid-template-columns: 0.8fr 1.2fr;
     }
     .footer__separator{
         height: 5px;
@@ -90,6 +92,9 @@
     }
     .presentation > div{
         width: 80%;
+    }
+    footer img{
+        width: 75px;
     }
 }
 @media (max-width: 1024px) {
@@ -165,6 +170,9 @@
         font-size: 0.7rem;
         margin: 0.5rem;
     }
+    footer img{
+        width: 70px;
+    }
 }
 @media (max-width: 680px) {
     .logo__link{
@@ -189,6 +197,7 @@
     }
     .presentation{
         width: 100%;
+        padding: 0 10px;
     }
     .presentation p{
         font-size: 0.9rem;

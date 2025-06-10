@@ -355,6 +355,7 @@ footer p{
     height: 60vh;
     width: 5px;
     border-radius: 5px;
+    margin: 10px;
 }
 .footer__share{
     height: 50vh;
@@ -402,7 +403,7 @@ footer p{
     margin: 0 20px;
 }
 .contact__phone{
-    grid-row: 2 / 4;
+    grid-row: 2 / 4; 
     grid-column: 2 / 2;
 }
 .contact__whatsapp{
