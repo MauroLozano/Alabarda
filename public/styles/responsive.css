@@ -248,7 +248,9 @@
     .service{
         flex-direction: column;
     }
-
+    .partner__info{
+        font-size: 1.3rem;
+    }
 }
 @media (max-width: 480px) {
     h1{
@@ -275,6 +277,10 @@
     }
     .feat-prod__link{
         font-size: 2rem;
+    }
+    .partners__slider{
+        width: 100vw;
+        border-radius: 0;
     }
     .service__img{
         width: 40px;    

@@ -89,6 +89,7 @@ header::after{
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
+
 .category1{
     width: 100%;
     height: 100%;
@@ -97,6 +98,9 @@ header::after{
     grid-row: span 2;
     grid-column: span 3;
     overflow: hidden;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 .category2{
     width: 100%;
@@ -106,6 +110,9 @@ header::after{
     grid-row: span 3;
     grid-column: span 2;
     overflow: hidden;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 .category3{
     width: 100%;
@@ -115,6 +122,9 @@ header::after{
     grid-row: span 3;
     grid-column: span 3;
     overflow: hidden;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 .category4{
     width: 100%;
@@ -124,10 +134,13 @@ header::after{
     grid-row: span 2;
     grid-column: span 2;
     overflow: hidden;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 .category__img{
     object-fit: cover;
-    height: inherit;
+    width: 100%;
 }
 .feat-prod__link{
     font-size:  4rem;
@@ -246,9 +259,14 @@ header::after{
     flex-direction: column;
     flex-shrink: 0;
 }
+.partner__picture{
+    width: 100%;
+    height: 100%;
+}
 .partner__img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: inherit;
 }
 .partner__info{
     position: absolute;
@@ -472,6 +490,9 @@ footer p{
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+p{
+    text-wrap: pretty;
 }
 .vast-shadow-regular {
     font-family: "Vast Shadow", serif;
@@ -810,7 +831,9 @@ h2{
     .service{
         flex-direction: column;
     }
-
+    .partner__info{
+        font-size: 1.3rem;
+    }
 }
 @media (max-width: 480px) {
     h1{
@@ -837,6 +860,10 @@ h2{
     }
     .feat-prod__link{
         font-size: 2rem;
+    }
+    .partners__slider{
+        width: 100vw;
+        border-radius: 0;
     }
     .service__img{
         width: 40px;    
