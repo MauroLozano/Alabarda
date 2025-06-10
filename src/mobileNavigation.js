@@ -2,39 +2,63 @@ import { previousElement, nextElement } from "./utils.js";
 export default function mobileNavigation(){
     const sections = document.querySelectorAll('.section'); //Makes an array with every element with the class .section.
     const partnersSlider = document.querySelector('.partners__slider'); 
-    const sliderPages = document.querySelectorAll('.slider__page');
-    let sliderPagesIndex = 0;
-    let lastSwipeScroll = 0;
-    const swipeCooldown = 400;
+    const slides = document.querySelectorAll('.partners__slide');
+    const mobileWidth = window.innerWidth;
+    let slideIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
-    const swipeXLength = 50;
     let touchStartY = 0;
     let touchEndY = 0;
+    let isMobileSmall = false;
+    if(mobileWidth<= 840){
+        isMobileSmall=true;
+    }else{
+        isMobileSmall=false;
+    }
     partnersSlider.addEventListener('touchstart', (event)=>{
         event.preventDefault();
         touchStartX = event.changedTouches[0].screenX;
     })
     partnersSlider.addEventListener('touchend', (event)=>{
         touchEndX = event.changedTouches[0].screenX;
-        if(touchEndX-touchStartX>50){
+        if(touchEndX-touchStartX>50 && !isMobileSmall){
             //swipe left
-            if(sliderPagesIndex==0){
-            sliderPagesIndex=2;
-            sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
-            }else{
-            sliderPagesIndex=sliderPagesIndex-1;
-                sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });             
+            if(slideIndex==0){
+                slideIndex=slides.length-3;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+            }else{      
+                slideIndex=slideIndex-1;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
             }
         };
-        if(touchEndX-touchStartX<-50){
+        if(touchEndX-touchStartX<-50 && !isMobileSmall){
             //swipe right
-            if(sliderPagesIndex == 2){
-                sliderPagesIndex=0;
-                sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+            if(slideIndex == slides.length-3){
+                slideIndex=0;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
             }else{
-                sliderPagesIndex=sliderPagesIndex+1;
-                sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                slideIndex=slideIndex+1;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+            }
+        };
+        if(touchEndX-touchStartX>50 && isMobileSmall){
+            //swipe left
+            if(slideIndex==0){
+                slideIndex=slides.length-1;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+            }else{      
+                slideIndex=slideIndex-1;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
+            }
+        };
+        if(touchEndX-touchStartX<-50 && isMobileSmall){
+            //swipe right
+            if(slideIndex == slides.length-1){
+                slideIndex=0;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+            }else{
+                slideIndex=slideIndex+1;
+                slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
             }
         };
     })

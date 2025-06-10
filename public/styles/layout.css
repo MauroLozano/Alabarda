@@ -228,11 +228,6 @@ header::after{
     scroll-behavior: smooth;
     border-radius: 10px;
 }
-.slider__page{
-    display: flex;
-    width: 100%;
-    scroll-snap-align: start;
-}
 .partners__slide{
     width: 30vw;
     height: 100%;
@@ -286,20 +281,21 @@ header::after{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 .presentation h3{
     font-size: 1.8rem;  
     color: #EAD196;
     font-family: Montserrat;
     text-align: center;
-    margin: 10px;
+    margin: 0.2rem;
 }
 .presentation p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #d5c3a7;
     font-family: Montserrat;
     text-align: center;
-    margin: 0 0.5rem;
+    margin:0.5rem;
 }
 .services{
     display: flex;

@@ -8,8 +8,8 @@ export default function scrollNavigation(){
     let isScrollbarPressed = false;
     document.addEventListener('wheel',handleWheel,{passive:false});  //Scrolling is a passive event by default in the browser, it's necessary to change it to false to use preventDefault().
     const partnersSlider = document.querySelector('.partners__slider'); 
-    const sliderPages = document.querySelectorAll('.slider__page');
-    let sliderPagesIndex = 0;
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.partners__slide');
     let lastSliderScroll = 0;
     const sliderCooldown = 400;
     if(partnersSlider && !isMobile()){
@@ -18,21 +18,21 @@ export default function scrollNavigation(){
             const now = Date.now();
             if(now - lastSliderScroll < sliderCooldown) return;
             if(event.deltaY !== 0){
-                if(event.deltaY > 0){
-                    if(sliderPagesIndex==0){
-                        sliderPagesIndex=2;
-                        sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
-                    }else{
-                        sliderPagesIndex=sliderPagesIndex-1;
-                        sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });             
+                if(event.deltaY > 0){ //Setted for 3 Slides in the page
+                    if(slideIndex==0){
+                        slideIndex=slides.length-3;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                    }else{      
+                        slideIndex=slideIndex-1;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
                     }
                 }else{
-                    if(sliderPagesIndex == 2){
-                        sliderPagesIndex=0;
-                        sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                    if(slideIndex == slides.length-3){
+                        slideIndex=0;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
                     }else{
-                        sliderPagesIndex=sliderPagesIndex+1;
-                        sliderPages[sliderPagesIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                        slideIndex=slideIndex+1;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
                     }
                 }
                 lastSliderScroll = now;
@@ -48,7 +48,6 @@ export default function scrollNavigation(){
         };
         last_execution=now;
         wheelDir = event.deltaY;//If wheelDir < 0 it is scrolling up.
-
         let newActive;
         let currentActive = document.querySelector('.active');
         currentActive.classList.remove('active');

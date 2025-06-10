@@ -103,6 +103,9 @@
     .header__subtitle{
         font-size: 2rem;
     }
+    .presentation p{
+        font-size: 1.3rem;
+    }
     .feat-prod__title{
         font-size: 6rem;
     }
@@ -115,12 +118,19 @@
     }
 }
 @media (max-width: 840px) {
+    .partners__title{
+        font-size: 4.5rem;
+    }
     .presentation__title{
         font-size: 4.5rem;
+        margin: 0.5rem;
     }
     .presentation__content{
         top: 6rem;
         width: 80vw;
+    }
+    .partners__slide{
+        width: 100%;
     }
 }
 @media (max-width: 760px) {
@@ -142,6 +152,9 @@
     }
     .feat-prod__slider{
         height: 10rem;
+    }
+    .partners__title{
+        font-size: 4.2rem;
     }
     .presentation p{
         font-size: 1.1rem;
@@ -174,13 +187,12 @@
     }
     .presentation{
         width: 100%;
-        
+    }
+    .presentation p{
+        font-size: 0.9rem;
     }
     .presentation__title{
         font-size: 4rem;
-    }
-    .presentation p{
-        font-size: 1.1rem;
     }
     .services p{
         font-size: 0.6rem;
@@ -189,22 +201,21 @@
         width: 100vw;
     }
     footer p{
-    font-size: 1.1rem;
+        font-size: 1.1rem;
     }
 }
 @media (max-width: 570px) {
     .feat-prod__link{
         font-size: 2.5rem;
     }
-    .presentation p{
-        font-size: 0.9rem;
-    }
     .services p{
         font-size: 0.7rem;
     }
     .presentation h3{
-        font-size: 1.2rem;  
-
+        font-size: 1.2rem;
+    }
+    .partners__title{
+        font-size: 4rem;
     }
 }
 @media (max-width: 540px) {
@@ -212,7 +223,7 @@
         font-size: 4rem;
     }
     .partners__title{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .presentation__title{
         font-size: 3rem;
@@ -223,6 +234,7 @@
     .service{
         flex-direction: column;
     }
+
 }
 @media (max-width: 480px) {
     h1{
@@ -242,6 +254,9 @@
         font-size: 3.6rem;
     }
     .presentation__title{
+        font-size: 3rem;
+    }
+    .partners__title{
         font-size: 3rem;
     }
     .feat-prod__link{
@@ -265,7 +280,7 @@
 }
 @media (max-width: 410px) {
     .partners__title{
-        font-size: 3.2rem;
+        font-size: 2.5rem;
     }
     .presentation__title{
         font-size: 2.5rem;
@@ -305,7 +320,15 @@
     .feat-prod__link{
         font-size: 1.8rem;
     }
+    .partners__title{
+        font-size: 2.3rem;
+    }
     .presentation__title{
         font-size: 2.2rem;
+    }
+}
+@media (max-height: 800px){
+    .presentation p{
+        font-size: 0.8rem;
     }
 }
