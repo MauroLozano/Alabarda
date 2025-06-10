@@ -491,6 +491,7 @@ h2{
 .section{
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    padding: 2vh 0;
 }
 .active{
     opacity: 1;
@@ -516,7 +517,7 @@ h2{
     }
     to{
         opacity: 100%;
-        transform: translate(-50%, -120px);
+        transform: translate(-50%, -140px);
     }
 }
 .slideInUp{
@@ -701,9 +702,6 @@ h2{
     .feat-prod__slider{
         height: 10rem;
     }
-    .partners__title{
-        font-size: 4.2rem;
-    }
     .presentation p{
         font-size: 1.1rem;
     }
@@ -729,6 +727,9 @@ h2{
     }
     .feat-prod__link{
         font-size: 3rem;
+    }
+    .partners__title{
+        font-size: 4.1rem;
     }
     .presentation > div{
         width: 100%;
@@ -763,7 +764,7 @@ h2{
         font-size: 1.2rem;
     }
     .partners__title{
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
 }
 @media (max-width: 540px) {
@@ -771,7 +772,7 @@ h2{
         font-size: 4rem;
     }
     .partners__title{
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     .presentation__title{
         font-size: 3rem;
@@ -805,7 +806,7 @@ h2{
         font-size: 3rem;
     }
     .partners__title{
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     .feat-prod__link{
         font-size: 2rem;

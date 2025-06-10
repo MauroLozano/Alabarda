@@ -153,9 +153,6 @@
     .feat-prod__slider{
         height: 10rem;
     }
-    .partners__title{
-        font-size: 4.2rem;
-    }
     .presentation p{
         font-size: 1.1rem;
     }
@@ -181,6 +178,9 @@
     }
     .feat-prod__link{
         font-size: 3rem;
+    }
+    .partners__title{
+        font-size: 4.1rem;
     }
     .presentation > div{
         width: 100%;
@@ -215,7 +215,7 @@
         font-size: 1.2rem;
     }
     .partners__title{
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
 }
 @media (max-width: 540px) {
@@ -223,7 +223,7 @@
         font-size: 4rem;
     }
     .partners__title{
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     .presentation__title{
         font-size: 3rem;
@@ -257,7 +257,7 @@
         font-size: 3rem;
     }
     .partners__title{
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     .feat-prod__link{
         font-size: 2rem;
