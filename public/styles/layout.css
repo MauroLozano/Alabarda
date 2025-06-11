@@ -81,7 +81,6 @@ header::after{
 .feat-prod__categories{
     width: 600px;
     height: 90%;
-    background-color: aqua;
     top: 3rem;
     right: 3rem;
     grid-area: 1 / 2 / 3 / 2;
@@ -92,50 +91,47 @@ header::after{
 .category1{
     width: 100%;
     height: 100%;
-    background-color: aliceblue;
-    border: solid 1px black;
     grid-row: span 2;
     grid-column: span 3;
     overflow: hidden;
     display: flex;
     place-items: center;
     justify-content: center;
+    border-radius: 5px 0 0 0;
 }
 .category2{
     width: 100%;
     height:100%;
-    background-color: aliceblue;
-    border: solid 1px black;
     grid-row: span 3;
     grid-column: span 2;
     overflow: hidden;
     display: flex;
     place-items: center;
     justify-content: center;
+    border-radius: 0 5px 0 0;
 }
 .category3{
     width: 100%;
     height:100%;
-    background-color: aliceblue;
-    border: solid 1px black;
     grid-row: span 3;
     grid-column: span 3;
     overflow: hidden;
     display: flex;
     place-items: center;
     justify-content: center;
+    border-radius: 0 0 0 5px;
 }
 .category4{
     width: 100%;
     height: 100%;
     background-color: aliceblue;
-    border: solid 1px black;
     grid-row: span 2;
     grid-column: span 2;
     overflow: hidden;
     display: flex;
     place-items: center;
     justify-content: center;
+    border-radius: 0 0 5px 0;
 }
 .category__link{
     width: 100%;
@@ -145,6 +141,11 @@ header::after{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.category__img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 .feat-prod__link{
     font-size:  4rem;
