@@ -27,7 +27,7 @@
         grid-row: 3;
         grid-column: 1;
         width: 500px;
-        height: 90%;
+        height: 100%;
     }
     .feat-prod__slider{
         overflow: hidden;
@@ -92,6 +92,14 @@
     }
     footer img{
         width: 75px;
+    }
+    .feat-prod__categories{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1200px) and (orientation: portrait){
+    .feat-prod__categories{
+        width: 500px;
     }
 }
 @media (max-width: 1024px) {

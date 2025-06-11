@@ -79,8 +79,8 @@ header::after{
     text-align: center;
 }
 .feat-prod__categories{
-    width: 80%;
-    height: 80%;
+    width: 600px;
+    height: 90%;
     background-color: aqua;
     top: 3rem;
     right: 3rem;
@@ -623,7 +623,7 @@ h2{
         grid-row: 3;
         grid-column: 1;
         width: 500px;
-        height: 90%;
+        height: 100%;
     }
     .feat-prod__slider{
         overflow: hidden;
@@ -688,6 +688,14 @@ h2{
     }
     footer img{
         width: 75px;
+    }
+    .feat-prod__categories{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1200px) and (orientation: portrait){
+    .feat-prod__categories{
+        width: 500px;
     }
 }
 @media (max-width: 1024px) {
