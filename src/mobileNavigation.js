@@ -9,19 +9,20 @@ export default function mobileNavigation(){
     let touchEndX = 0;
     let touchStartY = 0;
     let touchEndY = 0;
-    let isMobileSmall = false;
+    let isVWSmall = false;
     if(mobileWidth<= 840){
-        isMobileSmall=true;
+        isVWSmall=true;
     }else{
-        isMobileSmall=false;
+        isVWSmall=false;
     }
     partnersSlider.addEventListener('touchstart', (event)=>{
         event.preventDefault();
         touchStartX = event.changedTouches[0].screenX;
     })
+    
     partnersSlider.addEventListener('touchend', (event)=>{
         touchEndX = event.changedTouches[0].screenX;
-        if(touchEndX-touchStartX>50 && !isMobileSmall){
+        if(touchEndX-touchStartX>50 && !isVWSmall){
             //swipe left
             if(slideIndex==0){
                 slideIndex=slides.length-3;
@@ -31,7 +32,7 @@ export default function mobileNavigation(){
                 slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
             }
         };
-        if(touchEndX-touchStartX<-50 && !isMobileSmall){
+        if(touchEndX-touchStartX<-50 && !isVWSmall){
             //swipe right
             if(slideIndex == slides.length-3){
                 slideIndex=0;
@@ -41,7 +42,7 @@ export default function mobileNavigation(){
                 slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
             }
         };
-        if(touchEndX-touchStartX>50 && isMobileSmall){
+        if(touchEndX-touchStartX>50 && isVWSmall){
             //swipe left
             if(slideIndex==0){
                 slideIndex=slides.length-1;
@@ -51,7 +52,7 @@ export default function mobileNavigation(){
                 slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
             }
         };
-        if(touchEndX-touchStartX<-50 && isMobileSmall){
+        if(touchEndX-touchStartX<-50 && isVWSmall){
             //swipe right
             if(slideIndex == slides.length-1){
                 slideIndex=0;
@@ -61,6 +62,7 @@ export default function mobileNavigation(){
                 slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
             }
         };
+        
     })
     document.addEventListener('touchstart',(event)=>{ 
         touchStartY = event.changedTouches[0].screenY; //Gets the Y position when touching.

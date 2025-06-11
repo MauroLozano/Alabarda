@@ -12,13 +12,20 @@ export default function scrollNavigation(){
     const slides = document.querySelectorAll('.partners__slide');
     let lastSliderScroll = 0;
     const sliderCooldown = 400;
+    let isVWSmall = false;
+    const mobileWidth = window.innerWidth;
+    if(mobileWidth<= 840){
+        isVWSmall=true;
+    }else{
+        isVWSmall=false;
+    }
     if(partnersSlider && !isMobile()){
         partnersSlider.addEventListener('wheel', (event)=>{
             event.preventDefault(); 
             const now = Date.now();
             if(now - lastSliderScroll < sliderCooldown) return;
             if(event.deltaY !== 0){
-                if(event.deltaY > 0){ //Setted for 3 Slides in the page
+                if(event.deltaY > 0 && !isVWSmall){ //Setted for 3 Slides in the page
                     if(slideIndex==0){
                         slideIndex=slides.length-3;
                         slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
@@ -26,8 +33,25 @@ export default function scrollNavigation(){
                         slideIndex=slideIndex-1;
                         slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
                     }
-                }else{
+                }else if(event.deltaY < 0 && !isVWSmall){
                     if(slideIndex == slides.length-3){
+                        slideIndex=0;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                    }else{
+                        slideIndex=slideIndex+1;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                    }
+                }
+                if(event.deltaY > 0 && isVWSmall){
+                    if(slideIndex==0){
+                        slideIndex=slides.length-1;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
+                    }else{      
+                        slideIndex=slideIndex-1;
+                        slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });  
+                    }
+                }else if(event.deltaY < 0 && isVWSmall){
+                    if(slideIndex == slides.length-1){
                         slideIndex=0;
                         slides[slideIndex].scrollIntoView({ behavior: 'smooth' , inline: 'start', block: 'nearest' });
                     }else{
