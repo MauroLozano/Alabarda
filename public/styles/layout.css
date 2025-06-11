@@ -45,13 +45,13 @@ header::after{
 .header__logo{
     filter: drop-shadow(0 0 5px #050505);
     transition: filter 0.2s ease-in-out ;
+    width: 100px;
 }
 .header__logo:hover{
     filter: drop-shadow(5px 5px 20px #050505);
     transition: filter 0.2s ease-in-out ;
 }
 .logo__link{
-    width: 30px;
     position: absolute;
     left: 50px;
     top: 50px;
