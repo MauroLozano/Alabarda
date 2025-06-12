@@ -35,6 +35,9 @@ h2{
     color: #EAD196;
     text-align: center;
 }
+header{
+    opacity: 1 !important;
+}
 .section{
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
