@@ -511,6 +511,8 @@ footer p{
 }
 .page-info__text{
     font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem;
 }
 .page-info__text a{
     color: #c3aa72;
@@ -798,6 +800,9 @@ header{
     }
     footer img{
         width: 70px;
+    }
+    .page-info__text{
+        font-size: 0.8rem;
     }
 }
 @media (max-width: 680px) {

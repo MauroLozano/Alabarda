@@ -511,6 +511,8 @@ footer p{
 }
 .page-info__text{
     font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem;
 }
 .page-info__text a{
     color: #c3aa72;

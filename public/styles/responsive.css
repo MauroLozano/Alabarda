@@ -178,6 +178,9 @@
     footer img{
         width: 70px;
     }
+    .page-info__text{
+        font-size: 0.8rem;
+    }
 }
 @media (max-width: 680px) {
     .logo__link{
